@@ -1,0 +1,45 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Custom Scrollbar (Opsional agar lebih rapi) */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    ```
+
+### 2. Rapikan Folder & Buat Struktur Baru
+Supaya kode kita rapi dan modular:
+
+1.  Masuk ke dalam folder **`src`**.
+2.  **Hapus** file `App.css` dan folder `assets` (jika ingin bersih total, tapi dibiarkan juga tidak error).
+3.  Buat 3 folder baru di dalam `src`:
+    * Folder bernama **`components`**
+    * Folder bernama **`pages`**
+    * Folder bernama **`data`**
+
+### 3. Salin Kode (Copy-Paste)
+Ini bagian utamanya. Salin kode yang sudah saya berikan di jawaban panjang sebelumnya ke dalam file baru yang Anda buat di dalam folder-folder tadi:
+
+* **Di folder `src/data`**: Buat file `mockData.js` -> isi dengan kode data dummy.
+* **Di folder `src/components`**: Buat file `Sidebar.jsx` dan `Header.jsx` -> isi dengan kode komponen masing-masing.
+* **Di folder `src/pages`**: Buat file `Dashboard.jsx`, `MyCourses.jsx`, `MyTasks.jsx`, `Chat.jsx` -> isi dengan kode halaman.
+* **Di folder `src`**: Buka file `App.jsx` yang sudah ada -> hapus isinya dan ganti dengan kode `App.jsx` baru.
+
+### 4. Jalankan Aplikasi
+Setelah semua kode disalin:
+
+1.  Buka terminal (pastikan masih di folder `edu-platform`).
+2.  Ketik perintah:
+    ```bash
+    npm run dev
