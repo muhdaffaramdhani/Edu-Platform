@@ -1,3 +1,38 @@
+# EduPlatform — Run locally
+
+This project contains a React + Tailwind frontend (Vite) and a Django backend (SQLite) for local development.
+
+Quick steps (Windows PowerShell):
+
+1. Open PowerShell and navigate to the project folder (where this README sits).
+
+2. Run the helper script to prepare env and start both servers:
+
+```powershell
+.\start_servers.ps1
+```
+
+What the script does:
+- Creates a Python virtual environment in `backend/.venv` (if missing).
+- Installs backend dependencies from `backend/requirements.txt`.
+- Runs Django migrations.
+- Opens two new PowerShell windows: one runs `python manage.py runserver` (Django), the other runs `npm run dev` (Vite).
+
+Manual alternative:
+
+- Backend:
+  - `cd backend`
+  - `python -m venv .venv`
+  - `.\.venv\Scripts\Activate.ps1`
+  - `pip install -r requirements.txt`
+  - `python manage.py migrate`
+  - `python manage.py runserver`
+
+- Frontend:
+  - In project root: `npm install`
+  - `npm run dev`
+
+Frontend will run at `http://localhost:5173` and backend API at `http://127.0.0.1:8000`.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

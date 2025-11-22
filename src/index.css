@@ -1,22 +1,53 @@
 @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-    /* Custom Scrollbar (Opsional agar lebih rapi) */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-    ```
+/* Custom Scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add any project-wide custom styles below */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Small global helpers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-bg {
+  background-color: #f3f4f6;
+}
+
+/* Keep this file minimal; main Tailwind utilities are in `styles.css` which the app imports. */
 
 ### 2. Rapikan Folder & Buat Struktur Baru
 Supaya kode kita rapi dan modular:
@@ -36,10 +67,23 @@ Ini bagian utamanya. Salin kode yang sudah saya berikan di jawaban panjang sebel
 * **Di folder `src/pages`**: Buat file `Dashboard.jsx`, `MyCourses.jsx`, `MyTasks.jsx`, `Chat.jsx` -> isi dengan kode halaman.
 * **Di folder `src`**: Buka file `App.jsx` yang sudah ada -> hapus isinya dan ganti dengan kode `App.jsx` baru.
 
-### 4. Jalankan Aplikasi
-Setelah semua kode disalin:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-1.  Buka terminal (pastikan masih di folder `edu-platform`).
-2.  Ketik perintah:
-    ```bash
-    npm run dev
+/* Optional custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Note: The app imports `styles.css` which also contains Tailwind directives. Keep this file minimal. */
